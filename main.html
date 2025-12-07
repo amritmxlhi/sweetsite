@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="eng>">
+    <head>
+    <title>malhisweetshop</title>
+    <link rel="stylesheet" href="sweetstyle.css">
+    </head>
+<body data-theme="light">
+  <header>
+
+<!-- Welcome Popup -->
+<div id="welcomePopup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>🍬 Welcome to Sweet Delights!</h2>
+    <p>We’re glad you stopped by. Explore our treats and enjoy the experience!</p>
+    <button id="closePopup">Enter Site</button>
+  </div>
+</div>
+
+
+
+    <div>🍬 Malhi Sweet Shop</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#">Order Online</a>
+      <a href="#">Contact</a>
+      <button onclick="toggleTheme()">🌗 Mode</button>
+    </nav>
+  </header>
+
+  <!--<section class="hero">
+  <h1>Welcome to Malhi Sweet Shop</h1>
+  <p>Where tradition sweets modern taste</p>
+
+  /* Slider inside hero */
+  <div class="slider">
+    <div class="slides">
+      <img src="pic.jpeg\sweetimg.webp" alt="Traditional sweets" class="active">
+      <img src="pic.jpeg\sweet.webp" alt="Modern sweet presentation">
+      <img src="pic.jpeg/closeup-traditional-indian-sweet-shop-display_1057859-555.avif" alt="Sweet shop display">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>-->
+
+<section class="hero">
+  <div class="slider">
+    <div class="slides">
+      <img src="pic.jpeg\sweetiner.webp" alt="Traditional sweets" class="active">
+      <img src="pic.jpeg\sweetinner.webp" alt="Modern sweet presentation">
+      <img src="pic.jpeg\sweetinnner.webp" alt="Sweet shop display">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+
+  <div class="hero-content">
+    <h1>Welcome to Malhi Sweet Shop</h1>
+    <p>Where tradition sweets modern taste</p>
+  </div>
+</section>
+
+  <section id="menu" class="menu">
+    <h1>Our Sweet Menu</h1>
+    <div class="grid">
+      <div class="item">
+        <img src="pic.jpeg\laddu.webp" alt="Ladoo">
+        <div class="info">
+          <h3>Ladoo</h3>
+          <p>₹150 / kg</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pic.jpeg\jalebi.webp" alt="Jalebi">
+        <div class="info">
+          <h3>Jalebi</h3>
+          <p>₹120 / kg</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pic.jpeg\barfi.webp" alt="Barfi">
+        <div class="info">
+          <h3>Barfi</h3>
+          <p>₹200 / kg</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pic.jpeg\rasgulla.webp" alt="Rasgulla">
+        <div class="info">
+          <h3>Rasgulla</h3>
+          <p>₹180 / kg</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pic.jpeg\gulab jamun.webp" alt="Gulab Jamun">
+        <div class="info">
+          <h3>Gulab Jamun</h3>
+          <p>₹220 / kg</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pic.jpeg\soan papdi.webp" alt="Soan Papdi">
+        <div class="info">
+          <h3>Soan Papdi</h3>
+          <p>₹130 / kg</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pic.jpeg\pedaa.webp" alt="Peda">
+        <div class="info">
+          <h3>Peda</h3>
+          <p>₹160 / kg</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pic.jpeg\kaju katli.webp" alt="Kaju Katli">
+        <div class="info">
+          <h3>Kaju Katli</h3>
+          <p>₹300 / kg</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ✨ Gallery Section -->
+<section id="gallery" class="gallery">
+  <h1>🍬 Our Sweet Gallery</h1>
+  <p>Explore the beauty of our traditional & modern sweets</p>
+  
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="pic.jpeg\laddu.webp" alt="laddu">
+      <div class="overlay">Ladoo – ₹150/kg</div>
+    </div>
+    <div class="gallery-item">
+      <img src="pic.jpeg\jalebi.webp" alt="Jalebi">
+      <div class="overlay">Jalebi – ₹160/kg</div>
+    </div>
+    <div class="gallery-item">
+      <img src="pic.jpeg\barfi.webp" alt="Barfi">
+      <div class="overlay">Barfi – ₹400/kg</div>
+    </div>
+    <div class="gallery-item">
+      <img src="pic.jpeg\gulab jamun.webp" alt="Gulab Jamun">
+      <div class="overlay">Gulab Jamun – ₹160/kg</div>
+    </div>
+    <div class="gallery-item">
+      <img src="pic.jpeg\rasgulla.webp" alt="Rasgulla">
+      <div class="overlay">Rasgulla – ₹160/kg</div>
+    </div>
+    <div class="gallery-item">
+      <img src="pic.jpeg\kaju katli.webp" alt="Kaju Katli">
+      <div class="overlay">Kaju Katli – ₹300/kg</div>
+    </div>
+  </div>
+</section>
+
+    <section id="about" class="about">
+       <div class="card">
+      <h2>📞 Contact</h2>
+      <p><strong>Mobile:</strong> +91 85449 40486</p>
+      <p><strong>Email:</strong> info@malhisweetshop.com</p>
+    </div>
+    <div class="card">
+      <h2>📍 Address</h2>
+      <p>Main Bazaar Road, Gurdaspur, Punjab, India</p>
+    </div>
+    <div class="card">
+      <h2>🎉 Our Story</h2>
+      <p>From laddoos and jalebis to fusion sweets, we’ve been part of your celebrations for decades.</p>
+    </div>
+    <div class="card">
+      <h2>🌟 Special Thanks</h2>
+      <p>To our loyal customers who make Malhi Sweet Shop a household name.</p>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <h2>Our Journey</h2>
+    <ul>
+      <li>1985 – Founded with love and tradition</li>
+      <li>1995 – Expanded menu with modern sweets</li>
+      <li>2005 – Introduced online ordering</li>
+      <li>2020 – Redesigned with modern-classic branding</li>
+    </ul>
+  </section>
+
+  <div class="thankyou">
+
+    🌸 Thank You for Choosing Malhi Sweet Shop 🌸
+
+  </div>
+  </section>
+
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute("data-theme");
+      body.setAttribute("data-theme", currentTheme === "light" ? "dark" : "light");
+    }
+
+  
+  const slides = document.querySelectorAll('.slides img');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.classList.remove('active');
+      if (idx === i) slide.classList.add('active');
+    });
+  }
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    index = (index > 0) ? index - 1 : slides.length - 1;
+    showSlide(index);
+  });
+
+  document.querySelector('.next').addEventListener('click', () => {
+    index = (index < slides.length - 1) ? index + 1 : 0;
+    showSlide(index);
+  });
+
+  // Auto-play every 4 seconds
+  setInterval(() => {
+    index = (index < slides.length - 1) ? index + 1 : 0;
+    showSlide(index);
+  }, 4000);
+
+  // Initialize
+  showSlide(index);
+
+
+  window.onload = function() {
+    const popup = document.getElementById("welcomePopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    // Show popup on page load
+    popup.style.display = "flex";
+
+    // Close popup when button clicked
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  };
+
+// ...existing code...
+  window.onload = function() {
+    const popup = document.getElementById("welcomePopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    // Show popup on page load and prevent background scrolling
+    popup.style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+    // Close popup when button clicked — restore scrolling
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+      document.body.style.overflow = "";
+    });
+
+    // Optional: close when clicking outside the popup content
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+        document.body.style.overflow = "";
+      }
+    });
+  };
+  // ...existing code...
+  
+    
+    </script>
+</body>
+</html>
