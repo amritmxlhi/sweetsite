@@ -1,0 +1,517 @@
+/* ================================
+   🎨 Theme Colors (Light & Dark Mode)
+   These variables define the color palette
+   ================================ */
+:root {
+  --bg-color: #FDFBF7;        /* Ivory background for a clean premium look */
+  --text-color: #1C1C1C;      /* Charcoal text for readability */
+  --accent-color: #4B1E1E;    /* Deep burgundy for luxury accents */
+  --highlight-color: #D4AF37; /* Champagne gold for premium highlights */
+  --card-bg: #FFFFFF;         /* White background for cards */
+}
+[data-theme="dark"] {
+  --bg-color: #1C1C1C;        /* Dark charcoal background */
+  --text-color: #FDFBF7;      /* Ivory text for contrast */
+  --accent-color: #D4AF37;    /* Gold becomes the main accent in dark mode */
+  --highlight-color: #E6B7A9; /* Rose beige for softer highlights */
+  --card-bg: #2A2A2A;         /* Dark neutral card background */
+}
+
+/* ================================
+   🖋️ Base Styles
+   ================================ */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Clean modern font */
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.5s, color 0.5s; /* Smooth theme switch */
+}
+
+/* ================================
+   📌 Header & Navigation
+   ================================ */
+header {
+  position: sticky; top: 0; /* Stays visible when scrolling */
+  background: var(--accent-color);
+  color: #fff;
+  padding: 1rem;
+  display: flex; justify-content: space-between; align-items: center;
+  animation: slideDown 1s ease-out; /* Slide animation when page loads */
+}
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0; height: 2px;
+  background: var(--highlight-color); /* Gold underline on hover */
+  left: 0; bottom: -5px;
+  transition: width 0.3s;
+}
+nav a:hover::after { width: 100%; }
+
+/* ================================
+   🎬 Hero Section
+   ================================ */
+.hero {
+  height: 100vh; /* Full screen height */
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--bg-color), var(--highlight-color));
+  animation: fadeIn 2s ease-in; /* Smooth fade-in */
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif; /* Elegant serif font for headings */
+  font-size: 3rem;
+  color: var(--accent-color);
+  animation: bounceIn 2s ease-out; /* Bounce animation for title */
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  animation: fadeUp 2s ease-in; /* Text slides up */
+}
+.cta {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--accent-color);
+  color: #fff;
+  border: none; border-radius: 5px;
+  cursor: pointer; font-size: 1rem;
+  animation: pulse 2s infinite; /* Button pulses continuously */
+}
+.cta:hover {
+  transform: scale(1.1);
+  background: var(--highlight-color); /* Turns gold on hover */
+  color: var(--text-color);
+}
+
+/* ================================
+   🍬 Menu Grid (Sweet Items)
+   ================================ */
+.menu { padding: 50px; text-align: center; }
+.menu h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 25px;
+  animation: fadeUp 2s ease-in;
+}
+.item {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.item img {
+  width: 100%; height: 200px; object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.item:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 12px 25px rgba(0,0,0,.2);
+}
+.item:hover img { transform: scale(1.1); } /* Zoom effect */
+.info { padding: 15px; animation: fadeIn 1.5s ease-in; }
+.info h3 { margin: 10px 0; font-size: 1.3rem; color: var(--accent-color); }
+.info p { font-size: 1rem; font-weight: bold; color: var(--highlight-color); }
+
+/* ================================
+   📦 Cards (About, Contact, Story)
+   ================================ */
+.cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px; padding: 50px;
+  animation: fadeUp 2s ease-in;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-10px) rotate(-1deg); /* Tilt effect */
+  box-shadow: 0 12px 25px rgba(0,0,0,.2);
+}
+.card h2 { color: var(--accent-color); margin-bottom: 10px; }
+.card p { font-size: 1rem; line-height: 1.5; }
+
+/* ================================
+   🕰️ Timeline Section
+   ================================ */
+.timeline {
+  padding: 50px;
+  background: var(--highlight-color); /* Gold background */
+  color: #fff;
+  text-align: center;
+}
+.timeline h2 { font-size: 2rem; margin-bottom: 20px; }
+.timeline ul { list-style: none; padding: 0; }
+.timeline li {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  animation: fadeIn 2s ease-in;
+}
+
+/* ================================
+   🌟 Thank You Section
+   ================================ */
+.thankyou {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+  animation: pulse 2s infinite; /* Glowing pulse effect */
+}
+
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+.gallery h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in;
+}
+.gallery p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  animation: fadeUp 2s ease-in;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.15);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,.25);
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(212,175,55,0.85); /* champagne gold overlay */
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  transform: translateY(100%);
+  transition: transform .4s ease;
+}
+.gallery-item:hover .overlay {
+  transform: translateY(0); /* Slide up overlay on hover */
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 80px 40px; /* more breathing space */
+  text-align: center;
+  max-width: 1400px; /* wider container */
+  margin: 0 auto;    /* center the section */
+}
+.gallery h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  animation: fadeIn 2s ease-in;
+}
+.gallery p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 50px;
+  animation: fadeUp 2s ease-in;
+}
+
+/* Wider Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* wider cards */
+  gap: 30px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: 280px; /* taller images */
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,.25);
+}
+.gallery-item:hover img { transform: scale(1.1); }
+
+/* Overlay with premium accent */
+.overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(212,175,55,0.85); /* champagne gold */
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transform: translateY(100%);
+  transition: transform .4s ease;
+}
+.gallery-item:hover .overlay { transform: translateY(0); }
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #fff8e7, #fceabb);
+  color: #4a2c2a;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+/*
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.slides img {
+  width: 100%;
+  display: none;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slides img.active {
+  display: block;
+  opacity: 1;
+}
+*/
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 215, 0, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); /* soft dark overlay */
+  z-index: 0;
+}
+
+.hero {
+  position: relative;
+  height: 100vh; /* full screen hero */
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* behind content */
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes image cover hero */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slides img.active {
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* above slider */
+  text-align: center;
+  color: rgb(32, 140, 152);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); /* soft dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 0.8s ease;
+  }
+
+  .popup-content h2 {
+    color: #c9a46c; /* champagne gold accent */
+    margin-bottom: 1rem;
+  }
+
+  #closePopup {
+    background: #c9a46c;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  #closePopup:hover {
+    background: #a67c52; /* darker gold on hover */
+  }
+  .popup-overlay {
+  position: fixed;       /* stays on top of viewport */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;         /* ensures it's above all other elements */
+}
+
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+  @keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+  }
+
+
+
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); /* soft dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20000; /* ensure overlay sits above sticky header and other elements */
+    pointer-events: auto;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* ================================
+   🎞️ Animations
+   ================================ */
+@keyframes slideDown { from{transform:translateY(-100%);} to{transform:translateY(0);} }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+@keyframes bounceIn { 0%{transform:scale(.5);opacity:0;} 50%{transform:scale(1.2);opacity:1;} 100%{transform:scale(1);} }
+@keyframes fadeUp { from{transform:translateY(50px);opacity:0;} to{transform:translateY(0);opacity:1;} }
+@keyframes pulse { 0%{transform:scale(1);} 50%{transform:scale(1.05);} 100%{transform:scale(1);} }
